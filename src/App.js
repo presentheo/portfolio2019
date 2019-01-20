@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter as Router } from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+import MainContainer from './containers/MainContainer';
+
+const GlobalStyle = createGlobalStyle`
+  ${reset};
+  @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,400');
+  body{font-family: 'Noto Sans KR', sans-serif;}
+  a{
+    color: inherit;
+    text-decoration: none;
+    &:hover{
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+`
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <GlobalStyle/>
+          <MainContainer/>
+        </div>
+      </Router>
     );
   }
 }
