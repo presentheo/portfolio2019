@@ -6,7 +6,7 @@ const WorkWrap = styled.li`
   padding: 30px;
   border-bottom: 1px solid rgba(120,120,120, 0.2);
   &:hover {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 `
 const WorkAnchor = styled(Link)`
@@ -17,9 +17,9 @@ const WorkImage = styled.img`
   margin-right: 20px;
 `
 const WorkTitle = styled.h2`
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 `
 const WorkDescription = styled.p`
   font-size: 14px;
@@ -46,7 +46,7 @@ class Work extends Component {
     return (
       <WorkWrap>
         <WorkAnchor to="/detail">
-          <WorkImage src="https://via.placeholder.com/320x210" alt="placeholder"></WorkImage>
+          <WorkImage src={`/images/cover-${work.id}.png`} alt="placeholder"></WorkImage>
           <div>
             <WorkTitle>{work.title}</WorkTitle>
             <WorkDescription>{work.description}</WorkDescription>

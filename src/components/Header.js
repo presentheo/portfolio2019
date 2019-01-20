@@ -12,7 +12,7 @@ const Nav = styled.ul`
 const NavLink = styled(Link)`
   margin-right: 30px;
   &:hover{
-    color: #aaa;
+    color: coral;
   }
 `
 
@@ -20,6 +20,7 @@ class Header extends Component {
   render() {
     return (
       <Nav>
+        <li><NavLink to="/">home</NavLink></li>
         <li><NavLink to="/bio">biography</NavLink></li>
         <li><NavLink to="/tech">tech</NavLink></li>
         <li><NavLink to="/contact">contact</NavLink></li>
