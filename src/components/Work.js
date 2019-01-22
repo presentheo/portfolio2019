@@ -45,7 +45,7 @@ class Work extends Component {
 
     return (
       <WorkWrap>
-        <WorkAnchor to="/detail">
+        <WorkAnchor to={`/detail/${work.id}`}>
           <WorkImage src={`/images/cover-${work.id}.png`} alt="placeholder"></WorkImage>
           <div>
             <WorkTitle>{work.title}</WorkTitle>

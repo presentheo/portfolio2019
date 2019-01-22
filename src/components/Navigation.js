@@ -13,9 +13,8 @@ const Nav = styled.ul`
 const initialState = {
   navLinks: [
     {linkTo: "/", text: "home", active: false},
-    {linkTo: "/bio", text: "biography", active: false},
-    {linkTo: "/tech", text: "tech", active: false},
-    {linkTo: "/contact", text: "contact", active: false},
+    {linkTo: "/profile", text: "profile", active: false},
+    {linkTo: "/career", text: "career", active: false}
   ]
 }
 
@@ -44,8 +43,7 @@ class Navigation extends Component {
     return (
       <Nav>
         {this.state.navLinks.map((e, i) => {
-          return <li><NavigationLink 
-            key={i}
+          return <li key={i}><NavigationLink 
             onActive={() => this.onActive(i)}
             linkTo={e.linkTo} 
             text={e.text} 
