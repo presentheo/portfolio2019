@@ -35,7 +35,7 @@ class MainContainer extends Component {
       {
         id: 'galphi',
         title: '갈피', 
-        description: '책을 읽고 날짜별로 기록을 남길 수 있는 독서 일기장 컨셉의 프로젝트입니다.',
+        description: '책을 읽고 날짜별로 기록을 남길 수 있는 독서 일기장 컨셉의 개인 프로젝트입니다. (현재 날짜별 필터링 기능 구현 중입니다)',
         stacks: 'React.js, React-router',
         pageLink: '/projects/galphi',
         githubLink: 'https://github.com/presentheo/galphi'
@@ -43,7 +43,7 @@ class MainContainer extends Component {
       {
         id: 'reduxrecord',
         title: 'Redux Record 🎧', 
-        description: '음반 쇼핑몰 컨셉의 프로젝트입니다.',
+        description: '음반 쇼핑몰 컨셉의 개인 프로젝트입니다. 장바구니에 음반을 담고 주문할 수 있습니다.',
         stacks: 'React.js, Redux, React-router',
         pageLink: '/projects/redux-record',
         githubLink: 'https://github.com/presentheo/redux-commercial'
@@ -51,7 +51,7 @@ class MainContainer extends Component {
       {
         id: 'jsboard',
         title: 'js-board', 
-        description: '순수 Javascript와 jQuery로 구현한 게시판 서비스입니다. 게시물과 댓글을 localStorage에 저장하고 불러올 수 있습니다.',
+        description: '순수 Javascript와 jQuery로 구현한 게시판 컨셉의 개인 프로젝트입니다. 게시물과 댓글을 localStorage에 저장하고 불러올 수 있습니다.',
         stacks: 'jQuery',
         pageLink: '/projects/js-board',
         githubLink: 'https://github.com/presentheo/board'
@@ -70,6 +70,22 @@ class MainContainer extends Component {
         description: `P2P금융 기업 '플러시'의 웹 디자인과 웹 퍼블리싱 업무를 수행했습니다. (현재 서비스가 종료되어 접속이 불가능합니다)`,
         stacks: 'HTML, CSS',
         pageLink: '',
+        githubLink: ''
+      },
+      {
+        id: 'mmca',
+        title: '국립현대미술관 서울관',
+        description: `국립현대미술관 서울관의 홈페이지를 리디자인한 개인 프로젝트입니다.`,
+        stacks: 'HTML, CSS',
+        pageLink: '/projects/mmca',
+        githubLink: ''
+      },
+      {
+        id: 'brompton',
+        title: 'Brompton',
+        description: `영국의 자전거 브랜드인 Brompton의 홈페이지를 리디자인한 개인 프로젝트입니다.`,
+        stacks: 'HTML, CSS',
+        pageLink: '/projects/brompton',
         githubLink: ''
       }
     ]

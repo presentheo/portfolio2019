@@ -1,0 +1,581 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>국립현대미술관</title>
+
+	<!--[if lt IE 9]>
+		<script src="../js/html5shiv.js"></script>
+		<script src="../js/respond.min.js"></script>
+		<script src="../js/IE9.js"></script>
+	<![endif]-->
+
+	<!-- font awesome CSS -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<!-- bootstrap core css -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<!-- slick css -->
+	<link rel="stylesheet" href="../slick/slick.css">
+	<link rel="stylesheet" href="../slick/slick-theme.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="../css/main.css">
+
+
+</head>
+<body onload="initialize()">
+	
+	<!-- header area -->
+	<header id="header">
+		<!-- mobile btn -->
+		<div class="gnb-btn"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		
+		<!-- main title -->
+		<h1><a href="#" class="ir">국립현대미술관</a></h1>
+		<p>서울관</p>
+
+		<!-- gnb menu -->
+		<ul class="gnb-menu">
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">회원가입</a></li>
+			<li><a href="#">연회원안내</a></li>
+			<li>
+				<select name="lang" id="languege-select">
+					<option value="korean" selected="selected">한국어</option>
+					<option value="english">English</option>
+					<option value="japanese">日本語</option>
+					<option value="chinese">中文</option>
+				</select>
+			</li>
+		</ul>
+	</header>
+
+		<!-- mobile gnb -->
+	<nav id="gnb-mobile">
+		<i class="fa fa-bars" aria-hidden="true"></i>
+		<form action="" method="post">
+			<label for="login-id">아이디</label>
+			<input type="text" id="login-id">
+
+			<label for="login-pw">비밀번호</label>
+			<input type="password" id="login-pw">
+
+			<input type="submit" value="로그인">
+		</form>
+		<ul>
+			<li><a href="#">회원가입</a></li>
+			<li><a href="#">연회원 안내</a></li>
+			<li><a href="#main-contents">현재 전시</a></li>
+			<li><a href="#program">전시 연계 프로그램</a></li>
+			<li><a href="#pre-exhibit">예정 전시</a></li>
+			<li><a href="#other-exhibit">타관 전시</a></li>
+			<li><a href="#culture">문화행사</a></li>
+			<li><a href="#edu">교육</a></li>
+			<li><a href="#news">뉴스</a></li>
+			<li><a href="#notice">공지사항</a></li>
+			<li><a href="#">관람안내</a></li>
+			<li><a href="#">찾아오시는 길</a></li>
+		</ul>
+	</nav>
+
+	<!-- 메인 컨텐츠 영역 -->
+	<section id="main-contents">
+		<!-- title -->
+		<div class="title">
+			<h2>현재 전시</h2>
+		</div>
+		<div id="now-exhibit-wrapper">
+			<!-- contents 1 -->
+			<div class="now-exhibit1">
+				<div class="ex-images">
+					<img src="../images/ex-img1.jpg" alt="exhibit-on-now-image1">
+				</div>
+				<div class="caption">
+					<h3>&lt;미각의 미감&gt;</h3>
+					<p>참여작가 : 감동환, 바스 스티트겐, 스테파니 리틀러, 강주성, 고든 마타-클락, 김다움, 김종범 등</p>
+					<ul>
+						<li>2016. 12. 05 - 2017. 3. 19.</li>
+						<li>제1전시실 중앙홀</li>
+						<li>관람료 4,000원</li>
+					</ul>
+				</div>
+			</div>
+			<!-- contents 2 -->
+			<div class="now-exhibit2">
+				<div class="ex-images">
+					<img src="../images/ex-img2.jpg" alt="exhibit-on-now-image2">
+				</div>
+				<div class="caption">
+					<h3>&lt;올해의 작가상 2016&gt;</h3>
+					<p>참여작가 : 김을, 백승우, 함경아, 믹스라이스(양철모, 조지은)</p>
+					<ul>
+						<li>2016. 08. 31 - 2017. 02. 19.</li>
+						<li>제1, 2전시실</li>
+						<li>관람료 4,000원</li>
+					</ul>
+				</div>
+			</div>
+			<!-- contents 3 -->
+			<div class="now-exhibit3">
+				<div class="ex-images">
+					<img src="../images/ex-img3.jpg" alt="exhibit-on-now-image3">
+				</div>
+				<div class="caption">
+					<h3>&lt;보이드&gt;</h3>
+					<p>참여작가 : 김희천, 오픈하우스서울(임진영, 염상훈, 성주은, 김형진, 최진이)</p>
+					<ul>
+						<li>2016. 12. 05 - 2017. 3. 19.</li>
+						<li>제1전시실 중앙홀</li>
+						<li>관람료 4,000원</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 서브 컨텐츠 영역 -->
+	<section id="sub-contents">
+		<!-- contents 1 -->
+		<div id="program">
+			<div class="title">
+				<h2>전시 연계 프로그램</h2>
+			</div>
+			<div class="program-box1">
+				<div class="program-imgbox">
+					<img src="../images/pro-img.png" alt="exhibit-related-program image">
+				</div>
+				<div class="program-caption">
+					<h3>&lt;미각의 미감&gt; 연계강연 : 우리의 몸, 소우주</h3>
+					<ul>
+						<li>강연자 : 아사코 이와미(미술가, 요리사)</li>
+						<li>일시 : 2017. 03. 11.(토) 15:00 ~ 16:30</li>
+						<li>장소 : 국립현대미술관 교육동 강의실1</li>
+						<li>대상 : 대학(원)생, 일반인 및 전문인 /60명</li>
+						<li>참가비 : 무료</li>
+					</ul>
+					<p>국립현대미술관은 《미각의 미감》 전시 연계프로그램으로 미술가이자 요리사인 아사코 이와마의 강연을 진행합니다. 이번 강연에서는 아사코 이와마의 프로젝트, 요리와 음식에 대한 철학에 대해 이야기 합니다.</p>
+				</div>
+			</div>
+			<div class="program-box2">
+				<div class="program-imgbox">
+					<img src="../images/pro-img2.jpg" alt="exhibit-related-program image">
+				</div>
+				<div class="program-caption">
+					<h3>&lt;보이드&gt; 아티스트 토크: 옵.신(Ob.scene)</h3>
+					<ul>
+						<li>발표자 : 김성희, 서현석, 슬기와 민</li>
+						<li>일시 : 2017. 03. 11.(토) 15:00 ~ 16:30</li>
+						<li>장소 : 국립현대미술관 서울관 전시실 7</li>
+						<li>대상 : 참가를 원하는 관람객</li>
+						<li>참가비 : 무료</li>
+					</ul>
+					<p>《보이드》전 참여 작가인 ‘장(scene)으로부터 벗어(ob-)나는 잡지’ <옵.신>의 아티스트 토크를 진행합니다. 전시의 일부로 미술관 공간 20곳에 펼친 <옵.신 5호>와 이에 파생한 내용을 책으로 담은 『옵.신 6호』에 대한 이야기를 나누는 자리입니다. 참가자 분들은 사전에 전시실 7 앞 복도 끝에서 시작하는 <옵.신 5호>를 관람, 참여하고 본 토크에 참석해주시길 바랍니다.</p>
+				</div>
+			</div>
+		</div>
+	
+		<!-- contents 2 -->
+		<div id="pre-exhibit">
+		<!-- title -->
+			<div class="title">
+				<h2>다음 전시</h2>
+			</div>
+			<iframe width="100%" height="350" src="https://www.youtube.com/embed/WJ2eO-e8XB4" frameborder="0" allowfullscreen></iframe>
+			<div class="caption">
+				<h3>국립현대미술관 현대차 시리즈 : 안규철 - 안 보이는 사랑의 나라</h3>
+				<ul>
+					<li>참여작가 : 안규철</li>
+					<li>2017. 03. 20 - 2017. 05. 20.</li>
+					<li>제1전시실 중앙홀</li>
+					<li>관람료 미정</li>
+				</ul>
+				<p>“국립현대미술관 현대차 시리즈 2015: 안규철- 안 보이는 사랑의 나라” 전시는 총 8점의 신작으로 구성되고, ‘고립’ ‘격리’ ‘비움과 채움’이라는 특성으로 공간을 꾸몄습니다. 작가는 이 작품들을 통해 우리가 잃었거나 저 스스로 사라진 것들을 기억하고 추억 속에서 불러내고자 하는 생각을 투영했습니다. </p>
+			</div>
+		</div>
+
+		<!-- contents 3 -->
+		<div id="other-exhibit">
+			<!-- title -->
+			<div class="title">
+				<h2>타관 전시</h2>
+			</div>
+			<div class="other-exhibit-left">
+				<img src="../images/other-ex-img1.jpg" alt="exhibit-on-others-image1">
+				<div class="caption">
+					<span class="dsk">덕수궁관</span>
+					<h3>유영국, 절대와 자유</h3>
+					<ul>
+						<li>참여작가 : 유영국</li>
+						<li>2017. 03. 20 - 2017. 05. 20.</li>
+						<li>제1전시실 중앙홀</li>
+						<li>관람료 미정</li>
+					</ul>
+					<p>이 전시는 유영국 탄생 100주년을 맞아 기획되었다. 100년 전에 태어난 '근대' 작가라는 사실이 믿기지 않을 만큼 뛰어난 조형감각과 탄탄한 생활력을 겸비했던 화가 유영국. 그는 한국 사회에서 대중적인 인기를 담보한 '신화적' 존재는 아니다. 그러나 20세기 대혼란의 시기를 홀로 비켜선 듯 고고(孤高)한 삶과 예술을 견지했던 그의 능력과 감각은, 거의 비현실적으로 느껴질 만큼 탁월한 것이다.</p>
+				</div>
+			</div>
+			<div class="other-exhibit-right">
+				<img src="../images/other-ex-img2.jpg" alt="exhibit-on-others-image1">
+				<div class="caption">
+					<span class="gch">과천관</span>
+					<h3>달은, 차고, 이지러진다</h3>
+					<ul>
+						<li>참여작가 : 국내외 300여명(개인 및 그룹)</li>
+						<li>2017. 03. 20 - 2017. 05. 20.</li>
+						<li>제1전시실 중앙홀</li>
+						<li>관람료 미정</li>
+					</ul>
+					<p>이 전시는 작품이 탄생하는 시대적 배경-제작-유통-소장-활용-보존-소멸-재탄생의 생명 주기와 작품의 운명에 대해 집중적으로 고찰한다. 특히 현대미술품이 제도 내(미술관)에 수용되는 과정에서 제기되는 여러 논의들을 전시에 포함한다.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 사이드바 영역 -->
+	<aside id="sidebar">
+		<!-- 오늘의 행사 -->
+		<div class="today">
+			<p id="today-count">2017-02-21</p>
+			<dl>
+				<dt>오늘의 행사</dt>
+				<dd><a href="#">전시 5건</a></dd>
+				<dd><a href="#">교육 3건</a></dd>
+				<dd><a href="#">문화행사 0건</a></dd>
+			</dl>
+		</div>
+	
+		<!-- 관람시간 -->
+		<div class="sidebar-time">
+			<div class="title">
+				<h2>관람시간</h2>
+			</div>
+			<ul>
+				<li>
+					<dl>
+						<dt>2016년 10월 부터 휴관없는 박물관/미술관 시범 운영</dt>
+						<dd>- 정기휴관일 : 1월 1일, 설날, 추석</dd>
+					</dl>
+				</li>
+				<li><dl>
+					<dt>발권시간</dt>
+					<dd>- 관람종료 1시간 전까지 가능</dd>
+				</dl></li>
+				<li>
+					<dl>
+						<dt>관람시간</dt>
+						<dd>- 월, 화, 목, 금, 일요일 : 10:00 ~ 18:00</dd>
+						<dd>- 수, 토요일 : 10:00 ~ 21:00</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+	
+		<!-- 관람료 -->
+		<div class="sidebar-fee">
+			<div class="title">
+				<h2>관람료</h2>
+			</div>
+			<ul>
+				<li>
+					<dl>
+						<dt>통합관람권</dt>
+						<dd>- 4,000원</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>할인 대상</dt>
+						<dd>
+							<table>
+								<tr>
+									<td>단체</td>
+									<td>10인 이상의 단체 20%(방문 7일 전 예약 단체에 한함)</td>
+								</tr>
+								<tr>
+									<td>제휴사</td>
+									<td>
+										<ol>
+											<li>현대카드 플래티넘 회원 50%(동반 1인포함, 월5회, 해당카드 결제시)</li>
+											<li>아시아나클럽 일반회원 20% (카드제시자에 한함)</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>무료 대상</dt>
+						<dd>
+							<table>
+								<tr>
+									<td>일반</td>
+									<td>
+										<ol>
+											<li>만24세 이하 또는 만65세 이상</li>
+											<li>대학생</li>
+											<li>국립현대미술관 유료회원</li>
+											<li>박물관·미술관 학예사 자격 취득자</li>
+											<li>예술인패스 소지자</li>
+											<li>ICOM 카드 소지자</li>
+											<li>학생인솔교사</li>
+											<li>장애인 및 동행보호자</li>
+											<li>국가보훈대상자 (배우자 포함)</li>
+											<li>기초수급 대상자 및 차상위 계층</li>
+										</ol>
+									</td>
+								</tr>
+								<tr>
+									<td>제휴사</td>
+									<td>
+										<ol>
+											<li>현대카드 프리미엄 회원(동반 1인포함, 월5회, 해당카드 결제시)</li>
+											<li>아시아나클럽 우수회원 카드(카드제시자에 한함)</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>무료 관람일</dt>
+						<dd>- 매월 마지막 수요일 문화가 있는 날</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>주의사항</dt>
+						<dd>- 모든 단체관람(10인 이상)의 경우 사전예약제를 실시하고 있습니다. 비예약 방문 시 입장이 불허될 수 있으니, 방문일정을 미리 확인하시기 바랍니다.</dd>
+						<dd>- 미술관의 장소가 협소한 관계로 단체관람객이 식사할 수 있는 공간은 제공되지 않습니다.</dd>
+						<dd>- 현대카드 회원의 할인 및 무료관람은 ‘13.11.13부터 ’17.11.12까지 적용합니다.</dd>
+						<dd>- 아시아나클럽 회원의 할인 및 무료관람은 ’15.1.1부터 ‘17.12.31까지 적용합니다.</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>오디오가이드(음성안내 기기)</dt>
+						<dd>- 서비스 언어: 한국어, 영어 </dd>
+						<dd>- 위 치: 1층 안내데스크 </dd>
+						<dd>- 대여료: 3,000원</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>오디오가이드(스마트폰 이용)</dt>
+						<dd>- 무료 앱 '가이드온(GuideOn)' 다운로드</dd>
+						<dd>- 접속 후 메뉴선택 : '미술관&amp;갤러리' &gt; '서울관'</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+	
+		<!-- map -->
+		<div class="sidebar-map">
+			<div class="title">
+				<h2>찾아오시는 길</h2>
+			</div>
+			<!-- google map -->
+			<div id="map_canvas"></div>	
+			<address>주소 : 03062 서울시 종로구 삼청로 30</address>
+			<p>TEL : 02-3701-9500</p>
+		</div>
+	
+		<!-- sns -->
+		<div class="sidebar-sns">
+			<div class="title">
+				<h2>국립현대미술관 SNS</h2>
+			</div>		
+			<ul>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</aside>
+
+	<!-- 기타 컨텐츠 영역 -->
+	<div id="second-page-wrapper">
+		<section id="etc-contents">
+			<!-- 기타 컨텐츠 윗단 -->
+			<div class="etc-contents-top">
+				<div id="culture">
+					<div class="title">
+						<h2>문화행사</h2>
+						<a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+					</div>
+					<div>
+						<img src="../images/cul-img.png" alt="culture-program-image">
+						<div>
+							<h3>2월 문화가 있는 날 &lt;나의 이름은: Laser X Leather&gt;</h3>
+							<ul>
+								<li>강연자 : 무한상상실 아트팹랩</li>
+								<li>일시 :  2017. 2. 22. (수) / 11:00~12:30</li>
+								<li>장소 : 국립현대미술관 서울관 교육동 작업실 1</li>
+								<li>대상 : 참여를 원하는 미술관 관람객 최대 24명</li>
+								<li>참가비 : 무료</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="edu">
+					<div class="title">
+						<h2>교육</h2>
+						<a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+					</div>
+					<div>
+						<img src="../images/edu-img.png" alt="education-program-image">
+						<div>
+							<h3>제 15기 도슨트 양성 프로그램</h3>
+							<ul>
+								<li>운영기간:  2017. 4. 15. ~ 6. 17 /10회</li>
+								<li>장소 : 국립현대미술관 과천관, 서울관, 덕수궁관</li>
+								<li>대상 : 국립현대미술관 도슨트 활동을 희망하는 일반인 및 전공자(25세 이상)</li>
+								<li>교육내용: 미술관 연구, 한국 미술사, 프리젠테이션 방법 등 도슨트 활동을 위한 기초 이론 및 실무 교육 과정</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<!-- 기타 컨텐츠 아랫단 -->
+			<div class="etc-contents-bottom">
+				<div id="news">
+					<div class="title">
+						<h2>뉴스</h2>
+						<a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+					</div>
+					<div>
+						<img src="../images/news-img.png" alt="news-image">
+						<div>
+							<h3>국립현대미술관, 제98주년 3.1절 무료관람 실시</h3>
+							<p>국립현대미술관은 제 98주년 3.1절을 맞이하여 무료관람을 실시하오니 많은 관람 부탁드립니다.​</p>
+							<ul>
+								<li>일시 : 2017.03.01.(수) / 1일간 </li>
+								<li>대상 : 과천관, 서울관, 덕수궁관</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="notice">
+					<div class="title">
+						<h2>공지사항</h2>
+						<a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+					</div>
+					<div>
+						<ul>
+							<li><a href="#"><span class="seoul">서울관</span>MMCA Seoul 2017 Special Event ＂Lucky Mondays＂</a></li>
+							<li><a href="#"><span class="gch">과천관</span>2017년 &lt;제15기 도슨트 양성 프로그램 기초과정&gt; 교육생 모집 공고</a></li>
+							<li><a href="#"><span class="general">공통</span>국립현대미술관, 제98주년 3.1절 무료관람 실시</a></li>
+							<li><a href="#"><span class="seoul">서울관</span>국립현대미술관 미디어아트월 기획공모 최종합격자 발표 공고​</a></li>
+							<li><a href="#"><span class="dsk">덕수궁관</span>국립현대미술관 덕수궁관 프로모션 `덕수궁 가을밤의 꿈_Music on Yoo Youngkuk`</a></li>
+							<li><a href="#"><span class="general">공통</span>국립현대미술관 설 연휴 정상 개관 및 대체 휴관 안내​</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="footer-left">
+				<h1><a href="#main-contents" class="ir">국립현대미술관 서울관</a></h1>
+				<div class="footer-copy">
+					<p>대표자명: 바르토메우 마리 리바스(Bartomeu Mari Ribas)</p>
+					<p>사업자등록번호: 138-83-00313</p>
+					<p>Copyright &copy;2014 National Museum of Modern and Contemporary Art, Korea All rights reserved.</p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<div class="footer-menu">
+					<ul>
+						<li><a href="#">이용약관</a></li>
+						<li><a href="#">개인정보처리방침</a></li>
+						<li><a href="#">저작권정책</a></li>
+						<li><a href="#">메일링서비스</a></li>
+						<li><a href="#">국민신문고</a></li>
+						<li><a href="#">시설대관안내/신청안내</a></li>
+						<li><a href="#">정보공개</a></li>
+					</ul>
+
+					<!-- mobile footer menu -->
+					<select name="footer-menu" id="footer-menu-mobile">
+						<option value="이용약관" selected="selected">이용약관</option>
+						<option value="이용약관">개인정보처리방침</option>
+						<option value="이용약관">저작권정책</option>
+						<option value="이용약관">메일링서비스</option>
+						<option value="이용약관">국민신문고</option>
+						<option value="이용약관">시설대관안내/신청안내</option>
+						<option value="이용약관">정보공개</option>
+					</select>
+
+				</div>
+				<div class="footer-address">
+					<ul>
+						<li>
+							<p>서울관</p>
+							<address>03062 서울시 종로구 삼청로 30 (소격동)</address>
+							<p>TEL 02.3701.9500</p>
+							<p>
+								<a href="#">홈페이지</a>
+								<a href="#">찾아오시는 길</a>
+							</p>						
+						</li>
+						<li>
+							<p>과천관</p>
+							<address>13829 경기도 과천시 광명로 313 (막계동)</address>
+							<p>TEL 02.2188.6000</p>
+							<p>
+								<a href="#">홈페이지</a>
+								<a href="#">찾아오시는 길</a>
+							</p>						
+						</li>
+						<li>
+							<p>덕수궁관</p>
+							<address>04519 서울시 중구 세종대로 99 (정동)</address>
+							<p>TEL 02.2022.0600</p>
+							<p>
+								<a href="#">홈페이지</a>
+								<a href="#">찾아오시는 길</a>
+							</p>						
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+
+
+	<!-- 자바스크립트 적용시작 -->
+	<script src="../js/jquery-1.9.1.min.js"></script>
+	<!-- bootstrap js -->
+	<script src="../js/bootstrap.min.js"></script>
+	<!-- GOOGLE Map Api -->
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<!-- GOOGLE Map Function -->
+	<script src="../js/map.js"></script>
+	<!-- slick js -->
+	<script src="../slick/slick.js"></script>
+	<script>
+		$(document).ready(function(){
+		  $('#now-exhibit-wrapper').slick({
+			  dots: false,
+			  autoplay: true,
+			  autoplaySpeed: 3000,
+			  infinite: true,
+			  speed: 800,
+			  fade: true,
+			  cssEase: 'linear'
+		  });
+		});
+	</script>
+	<script src="../js/smoothscroll.js"></script>	
+	<!-- My JS -->
+	<script src="../js/main.js"></script>
+
+</body>
+</html>

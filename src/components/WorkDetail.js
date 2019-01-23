@@ -19,7 +19,7 @@ const DescStacks = styled.div`
 `
 const DescButtons = styled.div`
   display: flex;
-  &>button{
+  &>a{
     margin-right: 10px;
   }
 `
@@ -71,8 +71,8 @@ class WorkDetail extends Component {
             <p>{work.stacks}</p>
           </DescStacks>
           <DescButtons>
-            {work.pageLink !== '' ? <Button><a href={work.pageLink} target="_blank" rel="noopener noreferrer">보러가기</a></Button> : ''}
-            {work.githubLink !== '' ? <Button><a href={work.githubLink} target="_blank" rel="noopener noreferrer">Github</a></Button> : ''}
+            {work.pageLink !== '' ? <a href={work.pageLink} target="_blank" rel="noopener noreferrer"><Button>보러가기</Button></a> : ''}
+            {work.githubLink !== '' ? <a href={work.githubLink} target="_blank" rel="noopener noreferrer"><Button>Github</Button></a> : ''}
           </DescButtons>
         </DescWrap>
       </div>
