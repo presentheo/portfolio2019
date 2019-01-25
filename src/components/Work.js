@@ -34,7 +34,6 @@ const WorkStacksWrap = styled.div`
   font-weight: 600;
 `
 const WorkStacks = styled.p`
-  margin-top: 5px;
   color: #aaa;
   font-weight: 400;
 `

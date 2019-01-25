@@ -16,6 +16,9 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: none;
     }
   }
+  p{
+    line-height: 1.4;
+  }
 `
 
 class App extends Component {

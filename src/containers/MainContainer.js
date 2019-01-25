@@ -21,12 +21,14 @@ const MainWrap = styled.div`
 `
 const MainTitle = styled.h1`
   font-size: 13vh;
-  line-height: 1.1;
   letter-spacing: -1vh;
   position: absolute;
   top: 50vh;
   left: 10vh;
   transform: translateY(-50%);
+  &>p{
+    line-height: 1.1;
+  }
 `
 
 class MainContainer extends Component {
@@ -35,23 +37,23 @@ class MainContainer extends Component {
       {
         id: 'galphi',
         title: '갈피', 
-        description: '책을 읽고 날짜별로 기록을 남길 수 있는 독서 일기장 컨셉의 개인 프로젝트입니다. (현재 날짜별 필터링 기능 구현 중입니다)',
-        stacks: 'React.js, React-router',
+        description: '독서 일기장 컨셉의 개인 프로젝트를 제작했습니다. 책마다 날짜별로 코멘트를 남길 수 있습니다. (현재 날짜별 필터링 기능 구현 중입니다)',
+        stacks: 'React.js',
         pageLink: '/projects/galphi',
         githubLink: 'https://github.com/presentheo/galphi'
       },
       {
         id: 'reduxrecord',
         title: 'Redux Record 🎧', 
-        description: '음반 쇼핑몰 컨셉의 개인 프로젝트입니다. 장바구니에 음반을 담고 주문할 수 있습니다.',
-        stacks: 'React.js, Redux, React-router',
+        description: '음반 쇼핑몰 컨셉의 개인 프로젝트를 제작했습니다. 장바구니에 음반을 담고 주문할 수 있습니다.',
+        stacks: 'React.js, Redux',
         pageLink: '/projects/redux-record',
         githubLink: 'https://github.com/presentheo/redux-commercial'
       },
       {
         id: 'jsboard',
         title: 'js-board', 
-        description: '순수 Javascript와 jQuery로 구현한 게시판 컨셉의 개인 프로젝트입니다. 게시물과 댓글을 localStorage에 저장하고 불러올 수 있습니다.',
+        description: '게시판 컨셉의 개인 프로젝트를 제작했습니다. 게시물과 댓글을 localStorage에 저장하고 불러올 수 있습니다.',
         stacks: 'jQuery',
         pageLink: '/projects/js-board',
         githubLink: 'https://github.com/presentheo/board'
