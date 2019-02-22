@@ -14,7 +14,7 @@ const initialState = {
   navLinks: [
     {linkTo: "/", text: "home", active: false},
     {linkTo: "/profile", text: "profile", active: false},
-    // {linkTo: "/career", text: "career", active: false}
+    {linkTo: "/career", text: "career", active: false}
   ]
 }
 
