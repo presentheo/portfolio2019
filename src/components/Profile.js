@@ -165,10 +165,15 @@ class Profile extends Component {
                 <TechInfoListWrap>
                   <ul>
                     <TechInfoWrap>
+                      <TechInfoKey>Web</TechInfoKey>
+                      <TechInfoValue>웹 브라우저가 서비스를 구현하기 위해 거치는 과정(Critical rendering path)을 이해하고 설명할 수 있습니다. 또한 각 과정에서 발생할 수 있는 문제들을 예측하고 분석할 수 있습니다.</TechInfoValue>
+                      <TechInfoValue>API 명세를 읽고 이해할 수 있으며, REST 방식으로 데이터에 접근하여 브라우저에 렌더링할 수 있습니다.</TechInfoValue>
+                    </TechInfoWrap>
+                    <TechInfoWrap>
                       <TechInfoKey>Javascript</TechInfoKey>
-                      <TechInfoValue>웹 환경에서 자바스크립트의 동작 방식을 이해하고, 순수한 자바스크립트로 기능 구현이 가능합니다.</TechInfoValue>
+                      <TechInfoValue>웹 브라우저 환경에서 자바스크립트의 동작 방식을 이해하고, 순수한 자바스크립트로 기능 구현이 가능합니다.</TechInfoValue>
                       <TechInfoValue>ECMA Script 6 스펙에서 추가된 문법 요소들(let, const, class, 화살표 함수, 템플릿 문법…)의 도입 배경과 사용법을 이해하고 프로젝트에 적용할 수 있습니다.</TechInfoValue>
-                      <TechInfoValue>Node.js 환경에서 프로젝트를 구축해본 경험이 있으며, npm을 이용해 Node.js 패키지를 관리할 수 있습니다. Webpack을 이용한 프로젝트 모듈화와 코드 번들링 경험이 있습니다.</TechInfoValue>
+                      <TechInfoValue>Node.js와 express를 이용해 간단한 백엔드 서버를 구현할 수 있습니다.</TechInfoValue>
                     </TechInfoWrap>
                     <TechInfoWrap>
                       <TechInfoKey>React.js</TechInfoKey>
@@ -186,6 +191,16 @@ class Profile extends Component {
                       <TechInfoValue>디자인 시안을 바탕으로 원하는 페이지 디자인을 구현할 수 있습니다.</TechInfoValue>
                       <TechInfoValue>미디어쿼리를 이용해 반응형 웹을 구현할 수 있습니다.</TechInfoValue>
                       <TechInfoValue>CSS 스타일이 브라우저별로 구현되는 범위와 형태를 알고, 크로스브라우징에서 발생하는 문제들을 해결할 수 있습니다.</TechInfoValue>
+                    </TechInfoWrap>
+                    <TechInfoWrap>
+                      <TechInfoKey>Design</TechInfoKey>
+                      <TechInfoValue>PC, 태블릿, 모바일 등 다양한 디바이스에 대응하는 디자인 시안을 직접 제작할 수 있습니다.</TechInfoValue>
+                      <TechInfoValue>디자인 요소들을 컴포넌트, 모듈 단위로 분리하여 개발 생산성을 향상시킬 수 있습니다.</TechInfoValue>
+                    </TechInfoWrap>
+                    <TechInfoWrap>
+                      <TechInfoKey>etc.</TechInfoKey>
+                      <TechInfoValue>Git을 통해 팀원들과 협업한 경험이 있습니다. Git의 구조를 이해하고 있으며 명령어를 사용해 commit, push, pull, merge 등 동작을 수행할 수 있습니다.</TechInfoValue>
+                      <TechInfoValue>업무 관리 도구로 Jira를 사용한 경험이 있습니다. 스스로 업무 스케줄을 등록하고 관리할 수 있으며, 업무 진행 상황을 팀원들과 공유할 수 있습니다.</TechInfoValue>
                     </TechInfoWrap>
                   </ul>
                 </TechInfoListWrap>

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/projects/mise-oneclick/precache-manifest.485aaa00f81d9f409d4cc98acd2e90ce.js"
+  "/projects/mise-oneclick/precache-manifest.9876133b3f57f1c5555765b52dcba567.js"
 );
 
 workbox.clientsClaim();

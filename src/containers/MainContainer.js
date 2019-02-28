@@ -12,6 +12,7 @@ import Navigation from '../components/Navigation';
 import WorkList from '../components/WorkList';
 import WorkDetail from '../components/WorkDetail';
 import Profile from '../components/Profile';
+import Career from '../components/Career';
 
 const MainWrap = styled.div`
   width: 100%;
@@ -40,12 +41,12 @@ class MainContainer extends Component {
         description: '전국 각 시도별 미세먼지 농도를 실시간/시간별/일별로 확인할 수 있는 개인 프로젝트입니다. 정부 공공데이터포털(www.data.go.kr)의 open API와 node.js를 활용했습니다.',
         stacks: 'React.js, node.js, REST API',
         pageLink: '/projects/mise-oneclick',
-        githubLink: 'https://github.com/presentheo/galphi'
+        githubLink: 'https://github.com/presentheo/mise-oneclick'
       },
       {
         id: 'galphi',
         title: '갈피', 
-        description: '독서 일기장 컨셉의 개인 프로젝트를 제작했습니다. 책마다 날짜별로 코멘트를 남길 수 있습니다. (현재 날짜별 필터링 기능 구현 중입니다)',
+        description: '독서 일기장 컨셉의 개인 프로젝트를 제작했습니다. 책마다 날짜별로 코멘트를 남길 수 있습니다.',
         stacks: 'React.js',
         pageLink: '/projects/galphi',
         githubLink: 'https://github.com/presentheo/galphi'
@@ -122,6 +123,7 @@ class MainContainer extends Component {
             )
           }}></Route>
           <Route path="/profile" component={Profile}></Route>
+          <Route path="/career" component={Career}></Route>
           <Route path="/detail/:id" render={(props) => {return <WorkDetail workList={workList} {...props}/>}}></Route>
         </AnimatedSwitch>
       </MainWrap>
