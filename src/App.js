@@ -19,6 +19,9 @@ const GlobalStyle = createGlobalStyle`
   p{
     line-height: 1.4;
   }
+  div{
+    box-sizing: border-box;
+  }
 `
 
 class App extends Component {

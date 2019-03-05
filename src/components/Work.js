@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import {Col, Row} from 'react-styled-flexboxgrid';
 
 const WorkWrap = styled.li`
   padding: 30px;
@@ -8,13 +9,17 @@ const WorkWrap = styled.li`
   &:hover {
     opacity: 0.8;
   }
+  @media (max-width: 768px){
+    padding: 15px;
+  }
 `
 const WorkAnchor = styled(Link)`
-  display: flex;
+  display: block;
+  width: 100%;
   position: relative;
 `
 const WorkImage = styled.img`
-  margin-right: 20px;
+  width: 100%;
 `
 const WorkTitle = styled.h2`
   font-size: 26px;
@@ -45,15 +50,19 @@ class Work extends Component {
     return (
       <WorkWrap>
         <WorkAnchor to={`/detail/${work.id}`}>
-          <WorkImage src={`/images/cover-${work.id}.png`} alt="placeholder"></WorkImage>
-          <div>
-            <WorkTitle>{work.title}</WorkTitle>
-            <WorkDescription>{work.description}</WorkDescription>
-            <WorkStacksWrap>
-              <p>Tech Stacks</p>
-              <WorkStacks>{work.stacks}</WorkStacks>
-            </WorkStacksWrap>
-          </div>
+          <Row>
+            <Col md={5}>
+              <WorkImage src={`/images/cover-${work.id}.png`} alt="placeholder"></WorkImage>
+            </Col>
+            <Col md={7}>
+              <WorkTitle>{work.title}</WorkTitle>
+              <WorkDescription>{work.description}</WorkDescription>
+              <WorkStacksWrap>
+                <p>Tech Stacks</p>
+                <WorkStacks>{work.stacks}</WorkStacks>
+              </WorkStacksWrap>
+            </Col>
+          </Row>
         </WorkAnchor>
       </WorkWrap>
     );
