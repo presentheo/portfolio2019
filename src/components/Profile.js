@@ -49,7 +49,8 @@ const ProfileImage = styled.div`
   background-size: cover;
   background-position: bottom center;
 `
-const ContactInfo = styled.div`
+const ContactInfo = styled.span`
+  display: block;
   margin-bottom: 6px;
   & svg{
     font-size: 20px;

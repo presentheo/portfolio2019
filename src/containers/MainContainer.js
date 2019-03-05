@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import {Route} from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
+import {Col, Row} from 'react-styled-flexboxgrid';
 
 // 스타일 import
 import styled from 'styled-components';
@@ -19,6 +20,9 @@ const MainWrap = styled.div`
   height: 100vh;
   border: 15px solid coral;
   box-sizing: border-box;
+  @media (max-width: 768px){
+    height: auto;
+  }
 `
 const MainTitle = styled.h1`
   font-size: 13vh;
@@ -29,6 +33,12 @@ const MainTitle = styled.h1`
   transform: translateY(-50%);
   &>p{
     line-height: 1.1;
+  }
+  @media (max-width: 768px){
+    position: static;
+    font-size: 10vw;
+    letter-spacing: 0;
+    transform: none;
   }
 `
 
@@ -111,15 +121,19 @@ class MainContainer extends Component {
           className="switch-wrapper">
           <Route exact path="/" render={() => {
             return (
-              <div>
-                <MainTitle>
-                  <p><Strong>안녕하세요!</Strong></p>
-                  <p><Weak>프론트엔드</Weak></p>
-                  <p><Weak>웹 개발자</Weak></p>
-                  <p><Strong>허현재</Strong><Weak>입니다.</Weak></p>
-                </MainTitle>
-                <WorkList workList={workList}></WorkList>
-              </div>
+              <Row>
+                <Col md={5}>
+                  <MainTitle>
+                    <p><Strong>안녕하세요!</Strong></p>
+                    <p><Weak>프론트엔드</Weak></p>
+                    <p><Weak>웹 개발자</Weak></p>
+                    <p><Strong>허현재</Strong><Weak>입니다.</Weak></p>
+                  </MainTitle>
+                </Col>
+                <Col md={7}>
+                  <WorkList workList={workList}></WorkList>
+                </Col>
+              </Row>
             )
           }}></Route>
           <Route path="/profile" component={Profile}></Route>

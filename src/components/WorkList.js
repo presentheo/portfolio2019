@@ -3,14 +3,19 @@ import styled from 'styled-components';
 import Work from './Work';
 
 const WorkListWrap = styled.div`
-  height: calc(100% - 30px);
+  /* height: calc(100% - 30px);
   width: 55vw;
-  position: fixed;
+  position: fixed; */
   top: 15px;
   right: 0;
   border-left: 1px solid rgba(120,120,120, 0.2);
   box-sizing: border-box;
   overflow: auto;
+  @media (max-width: 768px){
+    position: static;
+    width: auto;
+    height: auto;
+  }
 `
 
 class WorkList extends Component {
