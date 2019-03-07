@@ -7,7 +7,7 @@ export const PageTitle = styled.h2`
   right: 10vh;
   @media(max-width: 768px){
     position: static;
-    font-size: 8vw;
+    font-size: 7vw;
     margin-bottom: 12px;
   }
 `

@@ -20,6 +20,10 @@ const Title = styled.h1`
     left: 0;
     bottom: -8px;
   }
+  @media (max-width: 768px){
+    margin-top: 20px;
+    font-size: 22px;
+  }
 `
 
 const TimelineWrap = styled.div`
@@ -28,6 +32,9 @@ const TimelineWrap = styled.div`
   padding-left: 40px;
   padding-right: 10px;
   overflow: auto;
+  @media (max-width: 768px){
+    height: auto;
+  }
 `
 const TimelineCard = styled.div`
   padding: 12px 20px;
@@ -77,11 +84,17 @@ const TimelinePosition = styled.h3`
   font-size: 22px;
   font-weight: 600;
   padding: 6px 0;
+  @media (max-width: 768px){
+    font-size: 18px;
+  }
 `
 const TimelineTitle = styled.p`
   font-size: 20px;
   font-weight: 600;
   color: #888;
+  @media (max-width: 768px){
+    font-size: 16px;
+  }
 `
 
 const TimelineContentWrap = styled.div`
