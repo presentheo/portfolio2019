@@ -72,14 +72,14 @@ class MainContainer extends Component {
         pageLink: '/projects/galphi',
         githubLink: 'https://github.com/presentheo/galphi'
       },
-      {
-        id: 'jsboard',
-        title: 'js-board', 
-        description: '게시판 컨셉의 개인 프로젝트를 제작했습니다. 게시물과 댓글을 localStorage에 저장하고 불러올 수 있습니다.',
-        stacks: 'jQuery',
-        pageLink: '/projects/js-board',
-        githubLink: 'https://github.com/presentheo/board'
-      },
+      // {
+      //   id: 'jsboard',
+      //   title: 'js-board', 
+      //   description: '게시판 컨셉의 개인 프로젝트를 제작했습니다. 게시물과 댓글을 localStorage에 저장하고 불러올 수 있습니다.',
+      //   stacks: 'jQuery',
+      //   pageLink: '/projects/js-board',
+      //   githubLink: 'https://github.com/presentheo/board'
+      // },
       {
         id: 'nouveauriche',
         title: 'Nouveauriche',
