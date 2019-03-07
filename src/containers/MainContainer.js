@@ -1,7 +1,6 @@
 // 기본 import
 import React, { Component } from 'react';
 import {Route} from 'react-router-dom';
-import { AnimatedSwitch } from 'react-router-transition';
 import {Col, Row} from 'react-styled-flexboxgrid';
 
 // 스타일 import
@@ -13,7 +12,7 @@ import Navigation from '../components/Navigation';
 import WorkList from '../components/WorkList';
 import WorkDetail from '../components/WorkDetail';
 import Profile from '../components/Profile';
-import Career from '../components/Career';
+import Experience from '../components/Experience';
 
 const MainWrap = styled.div`
   width: 100%;
@@ -22,6 +21,9 @@ const MainWrap = styled.div`
   box-sizing: border-box;
   @media (max-width: 768px){
     height: auto;
+    min-height: 100vh;
+    padding: 15px;
+    border-width: 9px;
   }
 `
 const MainTitle = styled.h1`
@@ -36,9 +38,10 @@ const MainTitle = styled.h1`
   }
   @media (max-width: 768px){
     position: static;
-    font-size: 10vw;
+    font-size: 12vw;
     letter-spacing: 0;
     transform: none;
+    padding-bottom: 20px;
   }
 `
 
@@ -54,20 +57,20 @@ class MainContainer extends Component {
         githubLink: 'https://github.com/presentheo/mise-oneclick'
       },
       {
+        id: 'reduxrecord',
+        title: 'Redux Record 🎧', 
+        description: '음반 쇼핑몰 컨셉의 개인 프로젝트를 제작했습니다. 장바구니에 음반을 담고 주문할 수 있습니다. 상태 관리 도구로 Redux를 사용해, 여러 컴포넌트가 상태를 공유하도록 구현했습니다.',
+        stacks: 'React.js, Redux',
+        pageLink: '/projects/redux-record',
+        githubLink: 'https://github.com/presentheo/redux-commercial'
+      },
+      {
         id: 'galphi',
         title: '갈피', 
         description: '독서 일기장 컨셉의 개인 프로젝트를 제작했습니다. 책마다 날짜별로 코멘트를 남길 수 있습니다.',
         stacks: 'React.js',
         pageLink: '/projects/galphi',
         githubLink: 'https://github.com/presentheo/galphi'
-      },
-      {
-        id: 'reduxrecord',
-        title: 'Redux Record 🎧', 
-        description: '음반 쇼핑몰 컨셉의 개인 프로젝트를 제작했습니다. 장바구니에 음반을 담고 주문할 수 있습니다.',
-        stacks: 'React.js, Redux',
-        pageLink: '/projects/redux-record',
-        githubLink: 'https://github.com/presentheo/redux-commercial'
       },
       {
         id: 'jsboard',
@@ -114,15 +117,10 @@ class MainContainer extends Component {
     return (
       <MainWrap>
         <Navigation/>
-        <AnimatedSwitch
-          atEnter={{ opacity: 0 }}
-          atLeave={{ opacity: 0 }}
-          atActive={{ opacity: 1 }}
-          className="switch-wrapper">
           <Route exact path="/" render={() => {
             return (
               <Row>
-                <Col md={5}>
+                <Col md={5} xs={12}>
                   <MainTitle>
                     <p><Strong>안녕하세요!</Strong></p>
                     <p><Weak>프론트엔드</Weak></p>
@@ -130,16 +128,15 @@ class MainContainer extends Component {
                     <p><Strong>허현재</Strong><Weak>입니다.</Weak></p>
                   </MainTitle>
                 </Col>
-                <Col md={7}>
+                <Col md={7} xs={12}>
                   <WorkList workList={workList}></WorkList>
                 </Col>
               </Row>
             )
           }}></Route>
           <Route path="/profile" component={Profile}></Route>
-          <Route path="/career" component={Career}></Route>
+          <Route path="/experience" component={Experience}></Route>
           <Route path="/detail/:id" render={(props) => {return <WorkDetail workList={workList} {...props}/>}}></Route>
-        </AnimatedSwitch>
       </MainWrap>
     )
   }

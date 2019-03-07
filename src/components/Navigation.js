@@ -8,13 +8,17 @@ const Nav = styled.ul`
   left: 10vh;
   display: flex;
   font-size: 14px;
+  @media (max-width: 768px){
+    position: static;
+    margin-bottom: 20px;
+  }
 `
 
 const initialState = {
   navLinks: [
     {linkTo: "/", text: "home", active: false},
     {linkTo: "/profile", text: "profile", active: false},
-    {linkTo: "/career", text: "career", active: false}
+    {linkTo: "/experience", text: "experience", active: false}
   ]
 }
 
@@ -38,8 +42,6 @@ class Navigation extends Component {
   componentDidMount(){
     this.onActive(0)
   }
-
-
 
   render() {
     return (

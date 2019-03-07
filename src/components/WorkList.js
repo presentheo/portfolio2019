@@ -10,6 +10,7 @@ const WorkListWrap = styled.div`
   @media (max-width: 768px){
     max-height: none;
     width: 100%;
+    border: 0;
   }
 `
 

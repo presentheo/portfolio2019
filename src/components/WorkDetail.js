@@ -6,9 +6,12 @@ const DescTitle = styled.h2`
   font-size: 42px;
   font-weight: 600;
   margin-bottom: 20px;
+  @media (max-width: 768px){
+    font-size: 28px;
+  }
 `
 const DescText = styled.p`
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-size: 14px;
   color: #888;
 `
@@ -27,13 +30,18 @@ const DescButtons = styled.div`
 const ImageWrap = styled.div`
   width: calc(60vw - 10vh);
   height: 75vh;
-  position: fixed;
+  position: absolute;
   top: 20vh;
   left: 10vh; 
   overflow: auto;
   &>img{
     display: block;
     width: 100%;
+  }
+  @media (max-width: 768px){
+    position: static;
+    width: 100%;
+    height: auto;
   }
 `
 const DescWrap = styled.div`
@@ -43,6 +51,13 @@ const DescWrap = styled.div`
   right: 10vh;
   padding-left: 30px;
   box-sizing: border-box;
+  @media (max-width: 768px){
+    position: static;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
 `
 
 class WorkDetail extends Component {
@@ -60,14 +75,11 @@ class WorkDetail extends Component {
 
     return (
       <div>
-        <ImageWrap>
-          <img src={`/images/preview-${work.id}.png`} alt={work.id}></img>
-        </ImageWrap>
         <DescWrap>
           <DescTitle>{work.title}</DescTitle>
           <DescText>{work.description}</DescText>
           <DescStacks>
-            <p style={{'margin-bottom':'4px', 'font-weight':'600', 'color':'#000'}}>Tech Stacks</p>
+            <p style={{marginBottom:'4px', fontWeight:'600', color:'#000'}}>Tech Stacks</p>
             <p>{work.stacks}</p>
           </DescStacks>
           <DescButtons>
@@ -75,6 +87,9 @@ class WorkDetail extends Component {
             {work.githubLink !== '' ? <a href={work.githubLink} target="_blank" rel="noopener noreferrer"><Button>Github</Button></a> : ''}
           </DescButtons>
         </DescWrap>
+        <ImageWrap>
+          <img src={`/images/preview-${work.id}.png`} alt={work.id}></img>
+        </ImageWrap>
       </div>
     );
   }

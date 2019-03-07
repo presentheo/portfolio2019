@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Strong, Weak } from '../styles/helper';
+import { PageTitle, PageContent } from '../styles/layout';
 import {Col, Row} from 'react-styled-flexboxgrid';
 import {FaGithub, FaEnvelopeSquare} from 'react-icons/fa';
 
-const PageTitle = styled.h2`
-  font-size: 8vh;
-  position: absolute;
-  top: 10vh;
-  right: 10vh;
-`
-const PageContent = styled.div`
-  width: calc(100vw - 20vh);
-  height: 65vh;
-  position: absolute;
-  left: 10vh;
-  bottom: 10vh;
+const ProfileInfo = styled.div`
+  height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  @media (max-width: 768px){
+    width: 100%;
+    height: auto;
+    padding-right: 0;
+    padding-top: 20px;
+  }
 `
 const ProfileInfoWrap = styled.div`
   margin-bottom: 24px;
+  padding-right: 20px;
+  @media (max-width: 768px){
+    padding-right: 0;
+  }
 `
 const ProfileInfoKey = styled.h4`
   font-size: 20px;
@@ -40,18 +43,26 @@ const ProfileInfoValue = styled.p`
   font-size: 14px;
   font-weight: 400;
   color: #888;
+  word-break: keep-all;
 `
 const ProfileImage = styled.div`
   width: 100%;
-  height: 65vh;
-  background-image: url("/images/profile-image.JPG");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-right: 20px;
+  & img{
+    width: 100%;
+  }
+  @media (max-width: 768px){
+    height: auto;
+    padding-right: 0;
+  }
 `
 const ContactInfo = styled.span`
-  display: block;
-  margin-bottom: 6px;
+  display: inline-block;
+  margin-top: 4px;
+  margin-right: 20px;
   & svg{
     font-size: 20px;
     margin-right: 4px;
@@ -61,20 +72,17 @@ const ContactInfo = styled.span`
     vertical-align: middle;
   }
 `
-
 const TechInfoListWrap = styled.div`
-  height: 65vh;
   position: relative;
-  overflow: auto;
 `
 const TechInfoWrap = styled.div`
   border: 1px solid #eee;
   border-radius: 4px;
-  padding: 14px 20px;
-  margin-bottom: 20px;
-  margin-right: 10px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
 `
 const TechInfoKey = styled(ProfileInfoKey)`
+  font-size: 16px;
   text-indent: 16px;
   &:before{
     content: '';
@@ -96,13 +104,6 @@ const TechInfoKey = styled(ProfileInfoKey)`
 const TechInfoValue = styled(ProfileInfoValue)`
   margin-bottom: 5px;
 `
-// const TimelineLine = styled.div`
-//   width: 1px;
-//   height: 100%;
-//   background-color: coral;
-//   position: absolute;
-//   left: 0;
-// `
 
 class Profile extends Component {
   render() {
@@ -112,39 +113,55 @@ class Profile extends Component {
           <Weak>저는 </Weak><Strong>이런 사람</Strong><Weak>입니다.</Weak>
         </PageTitle>
         <PageContent>
-            <Row>
-              <Col md={3}>
-                <ProfileImage>
-                </ProfileImage>
-              </Col>
-              <Col md={3}>
+          <Row>
+            <Col md={6} xs={12}>
+              <ProfileImage>
+                <img src="/images/profile-image.JPG" alt="profile"></img>
+              </ProfileImage>
+            </Col>
+            <Col md={6} xs={12}>
+              <ProfileInfo>
                 <Row>
-                  <Col md={6}>
+                  <Col md={3} xs={6}>
                     <ProfileInfoWrap>
                       <ProfileInfoKey>Name</ProfileInfoKey>
                       <ProfileInfoValue>허현재</ProfileInfoValue>
                     </ProfileInfoWrap>
                   </Col>
-                  <Col md={6}>
+                  <Col md={3} xs={6}>
                     <ProfileInfoWrap>
                       <ProfileInfoKey>Birth</ProfileInfoKey>
                       <ProfileInfoValue>1990. 12. 09</ProfileInfoValue>
                     </ProfileInfoWrap>
                   </Col>
-                </Row>
-                <Row>
-                  <Col md={6}>
+                  <Col md={3} xs={6}>
                     <ProfileInfoWrap>
                       <ProfileInfoKey>Educated</ProfileInfoKey>
-                      <ProfileInfoValue>경희대학교 언론정보학과(졸업)</ProfileInfoValue>
+                      <ProfileInfoValue>경희대학교 언론정보학과</ProfileInfoValue>
                     </ProfileInfoWrap>
                   </Col>
-                  <Col md={6}>
+                  <Col md={3} xs={6}>
                     <ProfileInfoWrap>
                       <ProfileInfoKey>Language</ProfileInfoKey>
                       <ProfileInfoValue>영어(TOEIC/865), 일본어(JLPT/N2)</ProfileInfoValue>
                     </ProfileInfoWrap>
                   </Col>
+                </Row>
+                <Row>
+                  <Col md={12} xs={12}>
+                    <ProfileInfoWrap>
+                      <ProfileInfoKey>Like</ProfileInfoKey>
+                      <ProfileInfoValue>머릿속에 있던 아이디어가 코드를 통해 화면에 구현되는 순간을 좋아합니다. 새로운 것을 배울 때의 긴장감과 설렘을 좋아합니다. React와 Redux를 활용한 프론트엔드 웹 개발에 관심이 많습니다. 최근에는 Vue와 node.js 백엔드를 공부하고 있습니다.</ProfileInfoValue>
+                    </ProfileInfoWrap>
+                  </Col>
+                  <Col md={12} xs={12}>
+                    <ProfileInfoWrap>
+                      <ProfileInfoKey>Vision</ProfileInfoKey>
+                      <ProfileInfoValue>웹 퍼블리셔로 1년간 근무하면서, 개발에 대한 흥미와 열정을 느껴 개발자로 성장하겠다는 목표를 세웠습니다. 이처럼 지금 알고 있는 기술에 만족하지 않고 끊임없이 새로운 것을 배우고 성장하는 개발자가 되고 싶습니다. 나아가, 프론트엔드뿐 아니라 웹 개발 전반을 아우르고 리딩할 수 있는 개발자로 성장하는 것이 저의 목표입니다.</ProfileInfoValue>
+                    </ProfileInfoWrap>
+                  </Col>
+                </Row>
+                <Row>
                 </Row>
                 <ProfileInfoWrap>
                   <ProfileInfoKey>Contact</ProfileInfoKey>
@@ -161,8 +178,9 @@ class Profile extends Component {
                     </ContactInfo>
                   </ProfileInfoValue>
                 </ProfileInfoWrap>
-              </Col>
-              <Col md={6}>
+                <ProfileInfoWrap>
+                  <ProfileInfoKey>Tech</ProfileInfoKey>
+                </ProfileInfoWrap>
                 <TechInfoListWrap>
                   <ul>
                     <TechInfoWrap>
@@ -205,9 +223,9 @@ class Profile extends Component {
                     </TechInfoWrap>
                   </ul>
                 </TechInfoListWrap>
-
-              </Col>
-            </Row>
+              </ProfileInfo>
+            </Col>
+          </Row>
           
         </PageContent>
       </div>

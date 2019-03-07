@@ -5,12 +5,12 @@ import {Col, Row} from 'react-styled-flexboxgrid';
 
 const WorkWrap = styled.li`
   padding: 30px;
-  border-bottom: 1px solid rgba(120,120,120, 0.2);
+  border-top: 1px solid rgba(120,120,120, 0.2);
   &:hover {
     opacity: 0.8;
   }
   @media (max-width: 768px){
-    padding: 15px;
+    padding: 15px 0;
   }
 `
 const WorkAnchor = styled(Link)`
@@ -20,6 +20,9 @@ const WorkAnchor = styled(Link)`
 `
 const WorkImage = styled.img`
   width: 100%;
+  @media (max-width: 768px){
+    margin-bottom: 12px;
+  }
 `
 const WorkTitle = styled.h2`
   font-size: 26px;
@@ -37,6 +40,10 @@ const WorkStacksWrap = styled.div`
   bottom: 3px;
   font-size: 13px;
   font-weight: 600;
+  @media (max-width: 768px){
+    position: static;
+    margin-top: 12px;
+  }
 `
 const WorkStacks = styled.p`
   color: #aaa;
@@ -51,10 +58,10 @@ class Work extends Component {
       <WorkWrap>
         <WorkAnchor to={`/detail/${work.id}`}>
           <Row>
-            <Col md={5}>
+            <Col md={5} xs={12}>
               <WorkImage src={`/images/cover-${work.id}.png`} alt="placeholder"></WorkImage>
             </Col>
-            <Col md={7}>
+            <Col md={7} xs={12}>
               <WorkTitle>{work.title}</WorkTitle>
               <WorkDescription>{work.description}</WorkDescription>
               <WorkStacksWrap>
