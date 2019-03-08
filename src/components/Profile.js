@@ -5,6 +5,8 @@ import { PageTitle, PageContent } from '../styles/layout';
 import {Col, Row} from 'react-styled-flexboxgrid';
 import {FaGithub, FaEnvelopeSquare} from 'react-icons/fa';
 
+import TransitionWrap from './TransitionWrap';
+
 const ProfileInfo = styled.div`
   height: 70vh;
   overflow-y: auto;
@@ -108,7 +110,7 @@ const TechInfoValue = styled(ProfileInfoValue)`
 class Profile extends Component {
   render() {
     return (
-      <div>
+      <TransitionWrap>
         <PageTitle>
           <Weak>저는 </Weak><Strong>이런 사람</Strong><Weak>입니다.</Weak>
         </PageTitle>
@@ -228,7 +230,7 @@ class Profile extends Component {
           </Row>
           
         </PageContent>
-      </div>
+      </TransitionWrap>
     );
   }
 }

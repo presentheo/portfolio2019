@@ -13,17 +13,28 @@ import WorkList from '../components/WorkList';
 import WorkDetail from '../components/WorkDetail';
 import Profile from '../components/Profile';
 import Experience from '../components/Experience';
+import TransitionWrap from '../components/TransitionWrap';
 
 const MainWrap = styled.div`
   width: 100%;
   height: 100vh;
-  border: 15px solid coral;
   box-sizing: border-box;
+  overflow: hidden;
+  &:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 15px solid coral;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
   @media (max-width: 768px){
     height: auto;
     min-height: 100vh;
-    padding: 15px;
-    border-width: 9px;
+    padding: 30px;
   }
 `
 const MainTitle = styled.h1`
@@ -119,19 +130,21 @@ class MainContainer extends Component {
         <Navigation/>
           <Route exact path="/" render={() => {
             return (
-              <Row>
-                <Col md={5} xs={12}>
-                  <MainTitle>
-                    <p><Strong>안녕하세요!</Strong></p>
-                    <p><Weak>프론트엔드</Weak></p>
-                    <p><Weak>웹 개발자</Weak></p>
-                    <p><Strong>허현재</Strong><Weak>입니다.</Weak></p>
-                  </MainTitle>
-                </Col>
-                <Col md={7} xs={12}>
-                  <WorkList workList={workList}></WorkList>
-                </Col>
-              </Row>
+              <TransitionWrap>
+                <Row>
+                  <Col md={5} xs={12}>
+                    <MainTitle>
+                      <p><Strong>안녕하세요!</Strong></p>
+                      <p><Weak>프론트엔드</Weak></p>
+                      <p><Weak>웹 개발자</Weak></p>
+                      <p><Strong>허현재</Strong><Weak>입니다.</Weak></p>
+                    </MainTitle>
+                  </Col>
+                  <Col md={7} xs={12}>
+                    <WorkList workList={workList}></WorkList>
+                  </Col>
+                </Row>
+              </TransitionWrap>
             )
           }}></Route>
           <Route path="/profile" component={Profile}></Route>

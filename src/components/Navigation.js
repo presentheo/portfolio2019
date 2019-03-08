@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import NavigationLink from './NavigationLink';
 
 const Nav = styled.ul`
-  position: fixed;
+  position: absolute;
   top: 10vh;
   left: 10vh;
   display: flex;
   font-size: 14px;
+  z-index: 1000;
   @media (max-width: 768px){
     position: static;
     margin-bottom: 20px;

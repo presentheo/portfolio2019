@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {Button} from '../styles/buttons';
+import TransitionWrap from './TransitionWrap';
 
 const DescTitle = styled.h2`
   font-size: 42px;
@@ -74,7 +75,7 @@ class WorkDetail extends Component {
     const work = this.setItemById(this.props.workList);
 
     return (
-      <div>
+      <TransitionWrap>
         <DescWrap>
           <DescTitle>{work.title}</DescTitle>
           <DescText>{work.description}</DescText>
@@ -90,7 +91,7 @@ class WorkDetail extends Component {
         <ImageWrap>
           <img src={`/images/preview-${work.id}.png`} alt={work.id}></img>
         </ImageWrap>
-      </div>
+      </TransitionWrap>
     );
   }
 }

@@ -4,6 +4,8 @@ import { Strong, Weak } from '../styles/helper';
 import { PageTitle, PageContent } from '../styles/layout';
 import {Col, Row} from 'react-styled-flexboxgrid';
 
+import TransitionWrap from './TransitionWrap';
+
 const Title = styled.h1`
   font-size: 28px;
   font-weight: 800;
@@ -122,7 +124,7 @@ const TimelineContentWrap = styled.div`
 class Experience extends Component {
   render() {
     return (
-      <div>
+      <TransitionWrap>
         <PageTitle>
           <Weak>저는 </Weak><Strong>이런 경험</Strong><Weak>이 있습니다.</Weak>
         </PageTitle>
@@ -198,7 +200,7 @@ class Experience extends Component {
             </Row>
           
         </PageContent>
-      </div>
+      </TransitionWrap>
     );
   }
 }
