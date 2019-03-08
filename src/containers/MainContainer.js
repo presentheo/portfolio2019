@@ -20,21 +20,12 @@ const MainWrap = styled.div`
   height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
-  &:before{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 15px solid coral;
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-  }
+  border: 15px solid coral;
   @media (max-width: 768px){
+    border-width: 9px;
     height: auto;
     min-height: 100vh;
-    padding: 30px;
+    padding: 20px;
   }
 `
 const MainTitle = styled.h1`

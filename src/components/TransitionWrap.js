@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Wrap = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  /* background-color: ${props => props.active ? 'black' : 'white'}; */
+  width: 100vw;
+  height: 100vh;
+  margin: -15px;
+  transition: all 0.5s cubic-bezier(0,.69,0,1.47);
   transform: ${props => props.active ? 'translateX(0)' : 'translateX(10%)'};
   opacity: ${props => props.active ? '1' : '0'};
+  @media (max-width: 768px){
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
 `
 
 class TransitionWrap extends Component {

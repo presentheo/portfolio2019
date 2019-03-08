@@ -16,7 +16,7 @@ export const PageContent = styled.div`
   height: 70vh;
   position: absolute;
   left: 10vh;
-  bottom: 10vh;
+  top: 20vh;
   @media(max-width: 768px){
     position: static;
     width: 100%;
